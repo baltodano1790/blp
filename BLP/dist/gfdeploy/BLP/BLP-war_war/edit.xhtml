@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+    
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+            <meta name="viewport" content="width=200, initial-scale=1" />
+
+            <title>Contacto BLP</title>
+        </f:facet>
+
+        <f:facet name="middle">
+            <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+
+            <h:outputStylesheet name="css/dashboard.css" />
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+
+            <h:outputScript name="bootstrap/js/bootstrap.js" />
+        </f:facet>
+
+        <f:facet name="last">
+            <h:outputStylesheet name="css/font-awesome.css" />
+        </f:facet>
+
+    </h:head>
+    
+ 
+   
+    
+<h:body> 
+	<div class="container">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-brand">
+				Editar contacto BLP
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h:form styleClass="form-horizontal">
+					<div class="form-group">
+						<h:outputLabel value="Id:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+							 <h:inputText readonly ="true" id="id" value="#{contactoController.c.id}" styleClass="form-control" title="Id" required="true" requiredMessage="The Id field is required."/>
+                 
+                                                </div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Nombre:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                        <h:inputText id="nombre" value="#{contactoController.c.nombre}" styleClass="form-control" title="Nombre" />
+                   
+                                                </div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Apellido:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                        <h:inputText id="apellido" value="#{contactoController.c.apellido}" styleClass="form-control" title="Apellido" />
+                                                </div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Correo:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                    <h:inputText id="correo" value="#{contactoController.c.correo}" styleClass="form-control" title="Correo" />
+                                                </div>
+					</div>
+                                        <div class="form-group">
+						<h:outputLabel value="Telefono:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                    <h:inputText id="telefono" value="#{contactoController.c.telefono}" styleClass="form-control" title="Telefono" />
+                                                </div>
+					</div>
+                                    
+                                    
+                                    <div class="form-group">
+						<h:outputLabel value="Nacimiento:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                    <h:inputText  id="fnacimiento" value="#{contactoController.c.fnacimiento}" styleClass="form-control" title="Fnacimiento" >
+                                                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                                                    </h:inputText>
+                                                </div>
+					</div>
+                                    
+                                    <div class="form-group">
+						<h:outputLabel value="Comentario:" styleClass="control-label col-sm-2"/>
+						<div class="col-sm-10">
+                                                    <h:inputText id="comentario" value="#{contactoController.c.comentario}" styleClass="form-control" title="Comentario" />
+                                                </div>
+					</div>
+                                      <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<h:commandButton action="#{contactoController.edit()}" value="Guardar" styleClass="btn btn-default"/>	
+						</div>
+					</div>
+                                      
+				</h:form>
+				
+			</div>
+		</div>
+	</div>
+</h:body> 
+
+
+</html>
+
+
+
